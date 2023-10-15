@@ -1,0 +1,17 @@
+This project aims to demonstrate a socket programming system between a server and client(s) to address the prevention of train collisions. 
+
+Algorithm for Train Collision Detection:
+1.	Same Track, Opposite Direction:
+    If two trains are on the same track and moving in opposite directions, a warning message is sent to both trains, indicating a potential collision.
+2.	Same Track, Same Direction:
+    If two trains are on the same track and moving in the same direction, the speed of the trailing train determines the likelihood of a collision.
+    If the trailing train's speed is greater or equal, a warning message is sent to both trains, indicating a potential collision.
+    If the trailing train's speed is lower, a cautionary message is sent to the trailing train, advising it to proceed with caution.
+3.	Different Tracks/Lines:
+    If the trains are on different tracks or lines, an "all clear" signal is displayed, indicating that there are no imminent collision risks.
+
+This project utilizes the TCP (Transmission Control Protocol). 
+The proof of its usage lies in the line " server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM) "
+
+Wireshark has also been implemented and used for verification of the connection and data transfer between the client and the server.
+
